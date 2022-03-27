@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inicio de Grizzley Bear Gym </title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    <header>
+        <h1>Grizzley Bear Gym</h1>
+    </header>
+    <!-- menu-->
+    <nav>
+        <ol>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="nosotros.html">Nosotros</a></li>
+            <li><a href="promociones.html">Promociones</a></li>
+            <li><a href="ubicaciones1.html">Ubicaciones</a></li>
+            <li><a href="Instalaciones.html">Instalaciones</a></li>
+        </ol>
+    </nav>
+    <img src="https://d22fxaf9t8d39k.cloudfront.net/c238fd2f8ad781514681e69136790e4ab7576f3debc33a044bbc299900563a8a26605.jpeg" widht="600" height="520" alt="imagen de persona entrenando"> 
+    
+    <main>
+        <section>
+            <article>
+               <h1> Escribenos a Grizley Bear Gym</h1>
+               <!--  inicia formulario-->
+               <form action="envio.php" method="post">
+                   <fieldset>
+                       <legend>Datos Personales</legend>
+                   <label for="nombre">Nombre y Apellido</label>
+                   <input type="text"placeholder="Edwin Carrillo" name=" Nombre" id="nombre">
+                   <br><br>
+                   <label for="email">Email</label>
+                   <input type="email" placeholder=""mail@mail.com" name="Email" id="email">
+                
+                </fieldset>
+                <fieldset>
+                    <legend>Metodo de pago</legend>
+                    <label for="pago">Efectivo</label>
+                    <input type="radio" name="pago" id="pago" value="Efectivo"> 
+    
+                    <label for="tarjeta">Tarjeta</label>
+                    <input type="radio" name="pago" id="tarjeta" value="Tarjeta">
+            
+                    <select name="modo de pago" id="modo de pago">
+                        <option value="credito">Credito</option>
+                        <option value="debito">Debito</option>
+                    
+                    </select>
+                </fieldset>
+                <fieldset>
+                    <legend>Promociones</legend>
+                    <label for="pago">Promo 1</label>
+                    <input type="radio" name="pago" id="pago" value="promo 1"> 
+            
+                    <label for="domicilio">Promo 2</label>
+                    <input type="radio" name="pago" id="promo 2" value="promo 2">
+            
+                    <select name="localidad" id="localidad">
+                        <option value="caba">CABA</option>
+                        <option value="buenos aires">Buenos aires</option>
+                        <option value="interior">interior del pais</option>
+                    </select>
+                
+                </fieldset>
+        
+
+                <input type="checkbox" name="Acepta" value="1">
+                <label for="Acepta">Acepta Terminos y Condiciones</label>
+                <input type="submit" value="Enviar">
+                <input type="reset" value="Borrar">
+                <br><br>
+
+
+            <label for="mensaje"> Dejanos tus comentarios</label>
+            <textarea name="mensaje" id="mensaje" cols="30" rows="10"></textarea>
+
+            <input type="submit" value="Enviar">
+
+           
+               </form>
+               <!--  cierra formulario-->
+            </article>
+                    <br>
+           </section>
+        </main>
+    <footer> 
+           <h2>Siguenos en las redes</h2>
+        <a href="https://facebook.com" target="blank"></a>
+        <a href="http://www.facebook.com/AQUI_TU_PAGINA" target="_blank"><img alt="Siguenos en Facebook" src="https://lh3.googleusercontent.com/-NSLbC_ztNls/T6VX0g6z8AI/AAAAAAAAA0A/_vyIBrmZbuY/s48/facebook48.png" width=48 height=48  /></a>
+        <a href="https://twitter.com" target="blank"></a>
+        <a href="http://twitter.com/AQUI_TU_USUARIO" target="_blank"><img src="https://lh6.googleusercontent.com/-vao9pzZoGtk/T6VYC4d1YMI/AAAAAAAAA0U/4rdP2chJido/s48/twitter48.png" width=48 height=48 alt="Síguenos en Twitter" /></a>
+    
+    
+
+            <article><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3285.142485093413!2d-58.47468958597239!3d-34.575261080466824!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcb670446eaf0f%3A0x571c2f64d047e1de!2sLa%20Pampa%204275%2C%20Buenos%20Aires!5e0!3m2!1ses-419!2sar!4v1645808861889!5m2!1ses-419!2sar" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe></article>
+    </footer>
+    
+    
+</body>
+</html>

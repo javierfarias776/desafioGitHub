@@ -1,0 +1,90 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,500;1,300&display=swap');
+
+
+
+html{
+
+    font-size: 100%;
+    border: none;
+}
+
+section article p{
+
+    font-size: 20px;
+    font-weight: 300;
+}
+
+p{  
+    
+    width: 95%;
+    margin: 10px auto;
+    padding: 10px 30px;
+    box-sizing: border-box;
+
+
+}
+
+
+nav ol li a{
+    font-family: 'Roboto', sans-serif;
+     
+}
+ol{
+    list-style: none;
+    background-color: orange;
+    font-size: 0;
+    padding: 20px;
+}
+
+li{
+    display: inline-block;
+    width: 20%;
+    position: relative;
+    font-size: 1rem;
+
+}
+ol ol{
+
+    position: absolute;
+    display: none;
+}
+ol li:hover ul {
+    display: block;
+
+}   
+
+ol ol li{
+    display: block;
+}
+
+a{
+    color: white;
+    text-decoration: none;
+    font-size: 2rem;
+}
+
+a:hover{
+    color: black;
+}
+
+h3{
+    font-size: 2rem;
+    text-align: center
+}
+/*definimos nuestro contenedor*/
+.grid{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 2rem;
+    width: 99%;
+    display: grid;
+
+}
+/*fondo de colores a columnas de promociones*/
+.bg-orange{
+    background-color: orange;
+
+}
+.bg-white{
+    background-color: green;
+}
