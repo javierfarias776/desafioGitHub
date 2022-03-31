@@ -1,35 +1,58 @@
+
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,500;1,300&display=swap');
-
-
-
-html{
-
-    font-size: 100%;
-    border: none;
-}
-
-section article p{
-
-    font-size: 20px;
-    font-weight: 300;
-}
-
-p{  
-    
-    width: 95%;
-    margin: 10px auto;
-    padding: 10px 30px;
+*{
+    margin:none;
+    padding: 3px;
     box-sizing: border-box;
-
-
+    
 }
-
-
-nav ol li a{
-    font-family: 'Roboto', sans-serif;
+body{
+    background: white;
+    font-family:'Roboto', sans-serif;  
      
 }
-ol{
+
+/*propiedades al menu*/
+
+.menu_link{
+    background: orange;
+    text-align: center;
+    margin-top: 0;
+}
+.link_item{
+    display: inline-block;
+    list-style: none;
+}
+
+.link{
+    text-decoration: none;
+    color: black;
+    font-family: 'roboto',sans-serif;
+    position: relative;
+}
+.link:before{
+    content: "";
+    width: 0;
+    height: 4px;
+    background-color: black;
+    position: absolute;
+    bottom: 0;
+    transition: all 1s;
+}
+.slider_left:before{
+    left:0;
+}
+.slider_right:before{
+    right:0;
+}
+
+.link:hover:before{
+    width: 100%;
+
+
+}
+
+ul{
     list-style: none;
     background-color: orange;
     font-size: 0;
@@ -43,7 +66,7 @@ li{
     font-size: 1rem;
 
 }
-ol ol{
+ul ul{
 
     position: absolute;
     display: none;
@@ -53,38 +76,227 @@ ol li:hover ul {
 
 }   
 
-ol ol li{
+ul ul li{
     display: block;
 }
 
-a{
+.menu_link a{
     color: white;
     text-decoration: none;
     font-size: 2rem;
 }
 
-a:hover{
+.menu_link a:hover{
+    color: black;
+}
+h3{
+    text-align: center;
+    padding: 16px 20px 25px 18px;
+    margin: 16px 20px 25px 18px;
+
+}
+
+.semiheader{
+    color: orange;
+    text-align: center;
+}
+
+
+/*propiedades a columnas de promociones*/
+
+
+
+.contenedor{
+    width: none;
+    max-width: 900px;
+    margin: auto;
+    height: 60vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+
+}
+
+.tabla {
+    width: 33%;
+    height: 600px;
+    margin: auto;
+    border:1px solid black;
+    border-radius: 4px;
+    padding: 90px;
+    text-align: center;
+    flex-grow: 1;
+    color: black;
+}
+.tabla > h2{
+    display: inline-block;
+    margin-bottom: 35px;
+
+
+}
+
+.tabla img{
+    width: 50px;
+    margin-bottom: 35px;
+}
+
+.tabla > h3{
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+.tabla > p{
+    display: block;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+
+ .bottom{
+    display: inline-block;
+    width: 150px;
+    padding: 12px;
+    background: orange;
+    text-decoration: none;
+    color: white;
+    border-radius: 100px;
+    text-align: center;
+    font-size: 14px;
+    font-weight: 600;
+    margin: auto;
+}
+.tabla:hover{
+    background: black;
+    color: orange;
+    transition: 1s all;
+    transform:scale(1.1);
+    cursor: pointer;
+
+}
+
+.bottom:hover{
+    background: orange;
+    color: black;
+    transition: 0.7s all;
+    transform:scale(1.3);
+    cursor: pointer;
+
+}
+/*formulario de subscripcion*/
+
+.form{
+    background-color: white;
+    margin: auto;
+    width: 80%;
+    max-width: 400px;
+    padding: 4.5em 3em;
+    border-radius: 10px;
+    box-shadow: 0 5px 10px -5px rgba( 0 0 0 /30%);
+    text-align: center;
+
+}
+.form__title{
+    font-size: 2rem;
+    margin-bottom: .5em;
+
+}
+
+.form__paragraph{
+    font-weight:300;
+
+}
+.form__link{
+    font-weight: 400;
+    color: black;
+
+}
+.form__container{
+    margin-top: 3em;
+    display: grid;
+    gap: 2.5em;
+
+}
+.form__group{
+    position: relative;
     color: black;
 }
 
-h3{
-    font-size: 2rem;
-    text-align: center
+.form__input{
+    width: 100%;
+    background: none;
+    color: orange;
+    font-size: 1rem;
+    padding: .6em .3em;
+    border: none;
+    outline: none;
+    border-bottom: 1px solid ;
+    font-family:'Roboto', sans-serif ;
 }
-/*definimos nuestro contenedor*/
-.grid{
-    display: grid;
-    grid-template-columns: repeat(3,1fr);
-    gap: 2rem;
-    width: 99%;
-    display: grid;
+
+.form__input:focus + .form__label,
+.form__input:not(:placeholder-shown)+ .form__label{
+    transform: translateY(-12px) scale(.7);
+    transform-origin: left top;
+    color: orange;
+}
+
+.form__label{
+    color: var(--color);
+    cursor:pointer;
+    position: absolute;
+    top: 0;
+    left: 5px;
+    transform: translateY(10px);
+    transition: transform .5s,color .3s;
+}
+.form__submit{
+    background:orange ;
+    color: white;
+    font-family: 'roboto', sans-serif;
+    font-weight: 300;
+    font-size: 1rem;
+    padding: .8em 0;
+    border: none;
+    border-radius: .5em;
+
 
 }
-/*fondo de colores a columnas de promociones*/
-.bg-orange{
-    background-color: orange;
-
+.form__submit:hover{
+        background: black;
+        color: orange;
+        transition: all 1s;
+        transform:scale(1.1);
+        cursor: pointer;
+    
 }
-.bg-white{
-    background-color: green;
+.form__line{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: black;
+    transform: scale(0);
+    transform: left bottom;
+    transition: transform .4s;
+}
+.form__input:focus ~ .form__line,
+.form__input:not(:placeholder-shown) ~ .form__line{
+    transform: scale(1);
+}
+
+
+
+
+
+
+@media screen and(max-width:1000px){
+
+    .tabla{
+        width: 45%;
+        flex-grow: initial;
+        max-width: none;
+        margin-bottom: 40px;
+
+    } 
 }
